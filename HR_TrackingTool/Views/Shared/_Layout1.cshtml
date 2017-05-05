@@ -1,0 +1,149 @@
+﻿<!DOCTYPE  html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/MVCGridHandler.axd/script.js"></script>
+</head>
+
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <a href="~/Details/"><img id="logo-header" src="~/Images/logo2-default.png" height="60" width="142" alt="Logo" /></a>
+                </div><!-- /logo -->
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("DASH BOARD", "UserDashBoard", "UserLogin")</li>
+                    <li class="dropdown">
+
+                        <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CANDIDATES<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="~/Details">View Candidate</a></li>
+                            <li><a href="~/Details/Create">Add Candidate</a></li>
+
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">POSITION<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="~/Job_Description">View Positions</a></li>
+
+                            <li><a href="~/Job_Description/Create">Add Position</a></li>
+
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">APPLICATIONS<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="~/Applied_jobs">View Applied jobs</a></li>
+                            <li><a href="~/Applied_jobs/Create">Apply New Job</a></li>
+
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+                <form  class="navbar-form navbar-left" role="search" action=.. method=GET>
+                    <div class="form-group">
+                        @Html.TextBox("Search_String")
+                        @*<input type="text" class="form-control" placeholder="Search" name=search_string>*@
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+
+                </form>
+
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Logout", "LogOff", "UserLogin")</li>
+                        
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Lenora Systems</p>
+                </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

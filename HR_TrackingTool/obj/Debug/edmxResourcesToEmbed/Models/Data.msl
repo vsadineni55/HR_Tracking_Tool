@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lenoraModelStoreContainer" CdmEntityContainer="lenoraEntities">
+    <EntitySetMapping Name="Details">
+      <EntityTypeMapping TypeName="lenoraModel.Detail">
+        <MappingFragment StoreEntitySet="Details">
+          <ScalarProperty Name="Resume1" ColumnName="Resume1" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Ph_Number" ColumnName="Ph_Number" />
+          <ScalarProperty Name="Visa_Status" ColumnName="Visa_Status" />
+          <ScalarProperty Name="Primary_Skills" ColumnName="Primary_Skills" />
+          <ScalarProperty Name="Secondary_Skills" ColumnName="Secondary_Skills" />
+          <ScalarProperty Name="Candidate_degree" ColumnName="Candidate_degree" />
+          <ScalarProperty Name="Majaor_degree" ColumnName="Majaor_degree" />
+          <ScalarProperty Name="Biling_Status" ColumnName="Biling_Status" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Description">
+      <EntityTypeMapping TypeName="lenoraModel.Job_Description">
+        <MappingFragment StoreEntitySet="Job_Description">
+          <ScalarProperty Name="Job_Id" ColumnName="Job-Id" />
+          <ScalarProperty Name="Job_Title" ColumnName="Job_Title" />
+          <ScalarProperty Name="Skills" ColumnName="Skills" />
+          <ScalarProperty Name="Roles_Resposibilities" ColumnName="Roles_Resposibilities" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applied_Jobs">
+      <EntityTypeMapping TypeName="lenoraModel.Applied_Jobs">
+        <MappingFragment StoreEntitySet="Applied_Jobs">
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Date_Recevied" ColumnName="Date_Recevied" />
+          <ScalarProperty Name="Additional_Info" ColumnName="Additional_Info" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Candidates_Submitted" ColumnName="Candidates_Submitted" />
+          <ScalarProperty Name="Submitted_Rate" ColumnName="Submitted_Rate" />
+          <ScalarProperty Name="VendorPOC" ColumnName="VendorPOC" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="Job_Title" ColumnName="Job_Title" />
+          <ScalarProperty Name="Job_id" ColumnName="Job_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLogins">
+      <EntityTypeMapping TypeName="lenoraModel.tblLogin">
+        <MappingFragment StoreEntitySet="tblLogin">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="User_name" ColumnName="User_name" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

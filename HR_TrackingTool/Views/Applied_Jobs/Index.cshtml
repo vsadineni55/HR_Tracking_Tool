@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HR_TrackingTool.Models.Applied_Jobs>
+
+@{
+    ViewBag.Title = "Job Available";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Applied Positions</h2>
+
+
+<table class="table table-bordered">
+    
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_Recevied)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job_Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorPOC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submitted_Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidates_Submitted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Additional_Info)
+            </th>
+            <th>
+                @Html.Label("Actions:")
+            </th>
+
+           
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_Recevied)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Job_Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vendor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorPOC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Submitted_Rate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Candidates_Submitted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Additional_Info)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Job_id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Job_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Job_id })
+                </td>
+            </tr>
+        }
+
+</table>

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<HR_TrackingTool.Models.Detail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+   <h2>List Of Candidates</h2>
+
+    <p>
+        @using (@Html.BeginForm("Index", "Details", FormMethod.Get))
+        {
+            <b>Search By:</b>
+            @Html.RadioButton("searchBy", "First Name", true) <text>Name</text>
+            @Html.RadioButton("searchBy", "Skills") <text>Skills</text><br />
+            @Html.TextBox("search") <input type="submit" value="search" />
+        }
+    </p>
+    <table class="table table-bordered">
+        
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Last_Name)
+                </th>
+                <th>
+                    @Html.Label("Actions:")
+                </th>
+
+            </tr>
+@if (Model.Count() == 0)
+{
+    <tr>
+        <td colspan="3">
+            No records match search criteria
+        </td>
+    </tr>
+}
+else
+{
+
+    foreach (var item in Model)
+    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.First_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Last_Name)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Candidate_id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Candidate_id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Candidate_id })
+                    </td>
+                </tr>
+    }
+}
+
+</table>
+</body>
+</html>
